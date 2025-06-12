@@ -1,0 +1,7 @@
+{
+  "name": "UprightApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
