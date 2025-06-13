@@ -1,13 +1,76 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>progreso</ion-title>
+    <div class="logo-wrapper">
+      <app-logo [size]="32"></app-logo>
+    </div>
+    <ion-buttons slot="end">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content id="main-content">
+  <div class="form-container">
+    <h2>Mi Progreso</h2>
+    
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="assets/img/postura1.jpg" alt="Postura 1">
+        <div class="image-info">
+          <span class="date">01/01/24</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/img/postura2.jpg" alt="Postura 2">
+        <div class="image-info">
+          <span class="date">15/01/24</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/img/postura3.jpg" alt="Postura 3">
+        <div class="image-info">
+          <span class="date">01/02/24</span>
+        </div>
+      </div>
+    </div>
+
+    <ion-button expand="block" class="upload-button">
+      <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+      Subir Nueva Foto
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">progreso</ion-title>
+      <ion-title>Menú</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item routerLink="/home" routerDirection="root" routerLinkActive="selected">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+      <ion-item routerLink="/perfil" routerDirection="root" routerLinkActive="selected">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Mi Perfil</ion-label>
+      </ion-item>
+      <ion-item routerLink="/ejercicios" routerDirection="root" routerLinkActive="selected">
+        <ion-icon name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Ejercicios</ion-label>
+      </ion-item>
+      <ion-item routerLink="/progreso" routerDirection="root" routerLinkActive="selected">
+        <ion-icon name="trending-up-outline" slot="start"></ion-icon>
+        <ion-label>Mi Progreso</ion-label>
+      </ion-item>
+      <ion-item routerLink="/login" routerDirection="root" routerLinkActive="selected">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

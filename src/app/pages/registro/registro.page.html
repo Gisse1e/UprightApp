@@ -1,13 +1,100 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">registro</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="safe-area"></div>
+  <div class="logo-wrapper">
+    <app-logo [size]="48" color="#1A5E7A"></app-logo>
+  </div>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Registro de Usuario</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input 
+            type="text" 
+            [(ngModel)]="nombre" 
+            placeholder="Ingrese su nombre"
+            required
+            minlength="2"
+            maxlength="50">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="text" 
+            [(ngModel)]="apellido" 
+            placeholder="Ingrese su apellido"
+            required
+            minlength="2"
+            maxlength="50">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-select 
+            [(ngModel)]="selectedOption" 
+            placeholder="Seleccione su ocupación"
+            interface="popover"
+            required>
+            <ion-select-option value="estudiante">Estudiante</ion-select-option>
+            <ion-select-option value="empleado">Empleado</ion-select-option>
+            <ion-select-option value="independiente">Independiente</ion-select-option>
+            <ion-select-option value="desempleado">Desempleado</ion-select-option>
+            <ion-select-option value="jubilado">Jubilado</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-datetime 
+            [(ngModel)]="selectedDate"
+            presentation="date"
+            locale="es-ES"
+            placeholder="Seleccione fecha de nacimiento"
+            required
+            max="2024-12-31">
+          </ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="text" 
+            [(ngModel)]="usuario" 
+            placeholder="Crear usuario"
+            required
+            minlength="3"
+            maxlength="20">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="password" 
+            [(ngModel)]="password" 
+            placeholder="Crear contraseña"
+            required
+            minlength="6"
+            maxlength="20">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            type="password" 
+            [(ngModel)]="confirmPassword" 
+            placeholder="Confirme su contraseña"
+            required
+            minlength="6"
+            maxlength="20">
+          </ion-input>
+        </ion-item>
+
+        <div class="ion-padding">
+          <ion-button expand="block" (click)="guardar()">Registrarse</ion-button>
+          <ion-button expand="block" fill="clear" routerLink="/login">¿Ya tienes cuenta? Inicia sesión</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

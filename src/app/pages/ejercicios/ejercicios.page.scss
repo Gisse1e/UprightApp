@@ -1,0 +1,134 @@
+ion-content {
+  --background: #E8F4F8;
+}
+
+ion-toolbar {
+  --background: #E8F4F8;
+}
+
+.safe-area {
+  height: env(safe-area-inset-top);
+  background-color: #1A5E7A;
+}
+
+.logo-wrapper {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 6px;
+}
+
+.logo-wrapper app-logo {
+  ::ng-deep {
+    .slogan-text {
+      font-size: 0.6em !important;
+    }
+  }
+}
+
+.form-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1A5E7A;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exercise-card {
+  background: #1A5E7A;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+
+  .exercise-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  ion-card-content {
+    padding: 16px;
+  }
+
+  .exercise-info {
+    color: #E8F4F8;
+
+    .time {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 16px;
+
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .elements {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+ion-menu-button {
+  --color: #1A5E7A;
+}
+
+ion-menu {
+  --background: #E8F4F8;
+  
+  ion-toolbar {
+    --background: #1A5E7A;
+    --color: #E8F4F8;
+  }
+
+  ion-list {
+    background: transparent;
+  }
+
+  ion-item {
+    --background: transparent;
+    --color: #1A5E7A;
+    margin: 8px 0;
+    
+    &.selected {
+      --background: #1A5E7A;
+      --color: #E8F4F8;
+    }
+
+    ion-icon {
+      color: #1A5E7A;
+    }
+
+    &.selected ion-icon {
+      color: #E8F4F8;
+    }
+  }
+}

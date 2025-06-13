@@ -1,0 +1,119 @@
+
+ion-content {
+    --background: #E8F4F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .safe-area {
+    height: 70px;
+    width: 100%;
+    background: #E8F4F8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .logo-wrapper {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: transparent;
+    padding: 4px;
+  }
+  
+  ion-header {
+    ion-toolbar {
+      --background: #1A5E7A;
+      --color: #F8EEE4;
+    }
+  }
+  
+  ion-card {
+    margin: 3rem auto 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    z-index: 0;
+  }
+  
+  ion-card-header {
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+  }
+  
+  ion-card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1A5E7A;
+  }
+  
+  ion-item {
+    margin-bottom: 0.5rem;
+    --background: transparent;
+    --border-color: #E8F4F8;
+    --highlight-color: #02968a;
+    --color: #1A5E7A;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+  }
+  
+  ion-input, ion-select, ion-datetime {
+    --color: #1A5E7A;
+    --placeholder-color: #02968a;
+    --padding-start: 8px;
+    font-size: 0.9rem;
+  }
+  
+  ion-button {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(26, 94, 122, 0.2);
+    height: 40px;
+    
+    &[color="primary"] {
+      --background: #1A5E7A;
+      --background-hover: #02968a;
+      --background-activated: #02968a;
+    }
+  }
+  
+  ion-button[fill="clear"] {
+    --color: #02968a;
+    font-weight: 500;
+    height: 36px;
+    margin-bottom: 0;
+    
+    &:hover {
+      --color: #1A5E7A;
+    }
+  }
+  
+  .ion-padding {
+    padding: 1rem;
+  }
+  
+  ion-label {
+    color: #1A5E7A;
+    font-weight: 500;
+  }
+  
+  ion-select::part(icon) {
+    color: #02968a;
+    opacity: 1;
+  }
+  
+  ion-datetime {
+    --background: transparent;
+    --background-rgb: transparent;
+  }
+  

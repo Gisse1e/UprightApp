@@ -1,0 +1,144 @@
+ion-content {
+  --background: #E8F4F8;
+}
+
+ion-toolbar {
+  --background: #E8F4F8;
+}
+
+.logo-wrapper {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 6px;
+}
+
+.logo-wrapper app-logo {
+  ::ng-deep {
+    .slogan-text {
+      font-size: 0.6em !important;
+    }
+  }
+}
+
+ion-menu-button {
+  --color: #1A5E7A;
+}
+
+ion-menu {
+  --background: #E8F4F8;
+  
+  ion-toolbar {
+    --background: #1A5E7A;
+    --color: #E8F4F8;
+  }
+
+  ion-list {
+    background: transparent;
+  }
+
+  ion-item {
+    --background: transparent;
+    --color: #1A5E7A;
+    margin: 8px 0;
+    
+    &.selected {
+      --background: #1A5E7A;
+      --color: #E8F4F8;
+    }
+
+    ion-icon {
+      color: #1A5E7A;
+    }
+
+    &.selected ion-icon {
+      color: #E8F4F8;
+    }
+  }
+}
+
+.form-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1A5E7A;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
+  ion-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    color: #1A5E7A;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.profile-info {
+  .info-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #E8F4F8;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    ion-icon {
+      font-size: 24px;
+      color: #1A5E7A;
+      margin-right: 15px;
+    }
+
+    .info-content {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .value {
+        color: #1A5E7A;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.edit-button {
+  margin-top: 30px;
+  --background: #1A5E7A;
+  --background-hover: #154960;
+  --background-activated: #154960;
+  --color: white;
+  font-weight: 500;
+}

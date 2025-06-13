@@ -1,0 +1,217 @@
+
+ion-content {
+    --background: #E8F4F8;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+  
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .logo-container {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .curved-text {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 240px;
+    height: 200px;
+    z-index: 1;
+    overflow: visible;
+  
+    text {
+      font-size: 32px;
+      font-weight: bold;
+      fill: #1A5E7A;
+      font-family: Arial, sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .slogan-text {
+    position: absolute;
+    bottom: 7px;
+    left: -30px;
+    width: 300px;
+    height: 40px;
+    z-index: 1;
+    overflow: visible;
+  
+    text {
+      font-size: 13px;
+      font-weight: 500;
+      fill: #1A5E7A;
+      font-family: Arial, sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .logo-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .main-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .app-title {
+    position: absolute;
+    color: #1A5E7A;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    top: -40px;
+    left: 0;
+    transform-origin: center;
+    transform: rotate(-5deg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: var(--ion-font-family-title);
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  
+  .slogan {
+    font-family: var(--ion-font-family-slogan);
+    font-weight: 500;
+    font-size: 1rem;
+    color: #02968a;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 320px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    margin-top: 2rem;
+  }
+  
+  ion-card-header {
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+  }
+  
+  ion-card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1A5E7A;
+    font-family: var(--ion-font-family-title);
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  
+  ion-card-content {
+    padding: 0.5rem 1rem 1rem;
+  }
+  
+  ion-item {
+    margin-bottom: 0.5rem;
+    --background: transparent;
+    --border-color: #E8F4F8;
+    --highlight-color: #02968a;
+    --color: #1A5E7A;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --font-family: var(--ion-font-family);
+    font-size: 0.9rem;
+  }
+  
+  ion-input {
+    --color: #1A5E7A;
+    --placeholder-color: #02968a;
+    --padding-start: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .ion-padding {
+    padding: 1rem 0.5rem;
+  }
+  
+  // Estilo para el header
+  ion-toolbar {
+    --background: #1A5E7A;
+    --color: #F8EEE4;
+  }
+  
+  // Estilo para los labels
+  ion-label {
+    color: #1A5E7A;
+    font-weight: 500;
+  }
+  
+  ion-button {
+    margin-top: 1rem;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(26, 94, 122, 0.2);
+    height: 40px;
+    --font-family: var(--ion-font-family);
+    font-weight: 500;
+    
+    &[color="primary"] {
+      --background: #1A5E7A;
+      --background-hover: #02968a;
+      --background-activated: #02968a;
+    }
+  }
+  
+  ion-button[fill="clear"] {
+    --color: #02968a;
+    font-weight: 500;
+    height: 36px;
+    
+    &:hover {
+      --color: #1A5E7A;
+    }
+  }
+  
