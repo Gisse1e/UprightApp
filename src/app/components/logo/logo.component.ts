@@ -5,20 +5,40 @@ import { CommonModule } from '@angular/common';
   selector: 'app-logo',
   template: `
     <div class="logo-container">
-      <img [src]="'assets/img/logo.png'" [alt]="'Upright Logo'" [style.width.px]="size">
-      <p *ngIf="showSlogan" class="slogan">Tu compañero para una mejor postura</p>
+      <div class="logo-wrapper">
+        <img [src]="'assets/img/logo.png'" [alt]="'Upright Logo'" [style.width.px]="size">
+      </div>
+      <div class="text-container">
+        <h1 class="title">UpRight</h1>
+        <p *ngIf="showSlogan" class="slogan">Tu recordatorio para una postura saludable</p>
+      </div>
     </div>
   `,
   styles: [`
     .logo-container {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 16px;
+      padding-left: 16px;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .title {
+      color: #1A5E7A;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
     }
     .slogan {
       color: #1A5E7A;
-      font-size: 12px;
+      font-size: 10px;
       margin: 0;
     }
   `],
@@ -26,5 +46,5 @@ import { CommonModule } from '@angular/common';
 })
 export class LogoComponent {
   @Input() size: number = 40;
-  @Input() showSlogan: boolean = false;
+  @Input() showSlogan: boolean = true;
 } 
